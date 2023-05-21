@@ -38,13 +38,18 @@
             this.txtTeacher = new System.Windows.Forms.TextBox();
             this.lblTeacher = new System.Windows.Forms.Label();
             this.txtEvaluationDate = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEvaluationDate = new System.Windows.Forms.Label();
+            this.numPoints = new System.Windows.Forms.NumericUpDown();
+            this.lblPoints = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).BeginInit();
             this.SuspendLayout();
             // 
             // lblActivities
             // 
             this.lblActivities.AutoSize = true;
-            this.lblActivities.Location = new System.Drawing.Point(27, 21);
+            this.lblActivities.Location = new System.Drawing.Point(25, 21);
             this.lblActivities.Name = "lblActivities";
             this.lblActivities.Size = new System.Drawing.Size(64, 16);
             this.lblActivities.TabIndex = 0;
@@ -54,7 +59,7 @@
             // lblMinForSignature
             // 
             this.lblMinForSignature.AutoSize = true;
-            this.lblMinForSignature.Location = new System.Drawing.Point(322, 21);
+            this.lblMinForSignature.Location = new System.Drawing.Point(324, 21);
             this.lblMinForSignature.Name = "lblMinForSignature";
             this.lblMinForSignature.Size = new System.Drawing.Size(98, 16);
             this.lblMinForSignature.TabIndex = 1;
@@ -65,23 +70,23 @@
             // 
             this.cboActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActivities.FormattingEnabled = true;
-            this.cboActivities.Location = new System.Drawing.Point(30, 40);
+            this.cboActivities.Location = new System.Drawing.Point(28, 40);
             this.cboActivities.Name = "cboActivities";
             this.cboActivities.Size = new System.Drawing.Size(253, 24);
             this.cboActivities.TabIndex = 2;
             // 
             // txtMinForSignature
             // 
-            this.txtMinForSignature.Location = new System.Drawing.Point(325, 42);
+            this.txtMinForSignature.Location = new System.Drawing.Point(327, 42);
             this.txtMinForSignature.Name = "txtMinForSignature";
             this.txtMinForSignature.ReadOnly = true;
-            this.txtMinForSignature.Size = new System.Drawing.Size(125, 22);
+            this.txtMinForSignature.Size = new System.Drawing.Size(100, 22);
             this.txtMinForSignature.TabIndex = 3;
             // 
             // lblMinForGrade
             // 
             this.lblMinForGrade.AutoSize = true;
-            this.lblMinForGrade.Location = new System.Drawing.Point(464, 21);
+            this.lblMinForGrade.Location = new System.Drawing.Point(434, 21);
             this.lblMinForGrade.Name = "lblMinForGrade";
             this.lblMinForGrade.Size = new System.Drawing.Size(101, 16);
             this.lblMinForGrade.TabIndex = 4;
@@ -89,24 +94,24 @@
             // 
             // txtMinForGrade
             // 
-            this.txtMinForGrade.Location = new System.Drawing.Point(467, 42);
+            this.txtMinForGrade.Location = new System.Drawing.Point(437, 42);
             this.txtMinForGrade.Name = "txtMinForGrade";
             this.txtMinForGrade.ReadOnly = true;
-            this.txtMinForGrade.Size = new System.Drawing.Size(125, 22);
+            this.txtMinForGrade.Size = new System.Drawing.Size(100, 22);
             this.txtMinForGrade.TabIndex = 5;
             // 
             // txtActivityDescription
             // 
-            this.txtActivityDescription.Location = new System.Drawing.Point(30, 83);
+            this.txtActivityDescription.Location = new System.Drawing.Point(28, 83);
             this.txtActivityDescription.Multiline = true;
             this.txtActivityDescription.Name = "txtActivityDescription";
             this.txtActivityDescription.ReadOnly = true;
-            this.txtActivityDescription.Size = new System.Drawing.Size(562, 179);
+            this.txtActivityDescription.Size = new System.Drawing.Size(509, 179);
             this.txtActivityDescription.TabIndex = 6;
             // 
             // txtTeacher
             // 
-            this.txtTeacher.Location = new System.Drawing.Point(213, 304);
+            this.txtTeacher.Location = new System.Drawing.Point(167, 303);
             this.txtTeacher.Name = "txtTeacher";
             this.txtTeacher.ReadOnly = true;
             this.txtTeacher.Size = new System.Drawing.Size(125, 22);
@@ -115,7 +120,7 @@
             // lblTeacher
             // 
             this.lblTeacher.AutoSize = true;
-            this.lblTeacher.Location = new System.Drawing.Point(210, 285);
+            this.lblTeacher.Location = new System.Drawing.Point(164, 284);
             this.lblTeacher.Name = "lblTeacher";
             this.lblTeacher.Size = new System.Drawing.Size(73, 16);
             this.lblTeacher.TabIndex = 8;
@@ -123,28 +128,66 @@
             // 
             // txtEvaluationDate
             // 
-            this.txtEvaluationDate.Location = new System.Drawing.Point(369, 332);
+            this.txtEvaluationDate.Location = new System.Drawing.Point(302, 303);
             this.txtEvaluationDate.Name = "txtEvaluationDate";
             this.txtEvaluationDate.ReadOnly = true;
             this.txtEvaluationDate.Size = new System.Drawing.Size(125, 22);
             this.txtEvaluationDate.TabIndex = 9;
             // 
-            // label1
+            // lblEvaluationDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(391, 302);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.lblEvaluationDate.AutoSize = true;
+            this.lblEvaluationDate.Location = new System.Drawing.Point(299, 284);
+            this.lblEvaluationDate.Name = "lblEvaluationDate";
+            this.lblEvaluationDate.Size = new System.Drawing.Size(114, 16);
+            this.lblEvaluationDate.TabIndex = 10;
+            this.lblEvaluationDate.Text = "Datum evaluacije:";
+            this.lblEvaluationDate.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // numPoints
+            // 
+            this.numPoints.Location = new System.Drawing.Point(437, 302);
+            this.numPoints.Name = "numPoints";
+            this.numPoints.Size = new System.Drawing.Size(100, 22);
+            this.numPoints.TabIndex = 11;
+            // 
+            // lblPoints
+            // 
+            this.lblPoints.AutoSize = true;
+            this.lblPoints.Location = new System.Drawing.Point(434, 284);
+            this.lblPoints.Name = "lblPoints";
+            this.lblPoints.Size = new System.Drawing.Size(53, 16);
+            this.lblPoints.TabIndex = 12;
+            this.lblPoints.Text = "Bodovi:";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(327, 340);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 38);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Spremi";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(437, 340);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 38);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Odustani";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // FrmEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(562, 403);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lblPoints);
+            this.Controls.Add(this.numPoints);
+            this.Controls.Add(this.lblEvaluationDate);
             this.Controls.Add(this.txtEvaluationDate);
             this.Controls.Add(this.lblTeacher);
             this.Controls.Add(this.txtTeacher);
@@ -157,6 +200,7 @@
             this.Controls.Add(this.lblActivities);
             this.Name = "FrmEvaluation";
             this.Text = "FrmEvaluation";
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +218,10 @@
         private System.Windows.Forms.TextBox txtTeacher;
         private System.Windows.Forms.Label lblTeacher;
         private System.Windows.Forms.TextBox txtEvaluationDate;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEvaluationDate;
+        private System.Windows.Forms.NumericUpDown numPoints;
+        private System.Windows.Forms.Label lblPoints;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
