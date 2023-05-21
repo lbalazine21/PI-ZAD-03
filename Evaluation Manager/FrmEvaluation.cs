@@ -34,7 +34,7 @@ namespace Evaluation_Manager
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FrmEvaluation_Load(object sender, EventArgs e)
@@ -58,6 +58,22 @@ namespace Evaluation_Manager
            currentActivity.MaxPoints;
             numPoints.Minimum = 0;
             numPoints.Maximum = currentActivity.MaxPoints;
+
+            var evaluation = EvaluationRepository.GetEvaluation(SelectedStudent, currentActivity);
+
+            if (evaluation != null)
+            {
+                txtTeacher.Text = evaluation.Evaluator.ToString();
+                txtEvaluationDate.Text = evaluation.EvaluationDate.ToString();
+                numPoints.Value = evaluation.Points;
+            }
+
+            else
+            {
+                txtTeacher.Text = FrmLogin.LoggedTeacher.ToString();
+                txtEvaluationDate.Text = "-";
+                numPoints.Value = 0;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
